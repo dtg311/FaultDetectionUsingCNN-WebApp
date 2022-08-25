@@ -1,0 +1,21 @@
+body{
+    background-image: url("solar.png");
+}
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+  }
+ .button{
+    color:black;
+    background-color: rgb(255, 136, 0);
+    border: 2px solid black;
+  }
+
+  .div {
+resize: both;
+overflow: auto;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
