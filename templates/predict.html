@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <title>Prediction Results!</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='mystyle2.css') }}">
+</head>  
+ 
+<body > 
+
+
+<div id="maintext" style="position:absolute; margin: auto; width:700px; height:600px; text-align:center; top:0; bottom: 0; left: 0; right: 0;resize: both; overflow:auto;">
+  <h1 class="text-light mb-5">Classification Results</h1>
+  <h3 class="text-light">Results after the CNN MODEL</h3>
+  
+  <table style="background-color: #87bae8;"class="center">
+  <tr>
+    <th>File that was uploaded</th>
+    <th>Class</th>
+    <th>Type of Fault in the file that was uploaded</th>
+  </tr>
+  <tr>
+    <td>{{filename}}</td>
+    <td >{{index}}</td>
+    <td >{{predictions[index]}}</td>
+  </tr>
+  </table>
+  <br>
+  <a href="{{ url_for('main_page') }}"><button class="button">Try again?</button></a>
+  <br><br>
+  <table style="background-color: #87bae8;">
+    <tr>
+        <td>Class Number</td>
+        <td>Class Name</td>
+        <td>Description </td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>Cell</td>
+        <td>Hot spot occurring with square geometry in single cell. </td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Cell-Multi</td>
+        <td>Hot spots occurring with square geometry in multiple cells. </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Cracking</td>
+        <td>Module anomaly caused by cracking on module surface. </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Diode</td>
+        <td>Activated bypass diode, typically 1/3 of module. </td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Diode-Multi</td>
+        <td>Multiple activated bypass diodes, typically affecting 2/3 of module. </td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Hot-Spot</td>
+        <td>Hot spot on a thin film module. </td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Hot-Spot-Multi</td>
+        <td>Multiple hot spots on a thin film module. </td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>No-Anomaly</td>
+        <td>Nominal solar module. </td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Offline-Module</td>
+        <td>Entire module is heated. </td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Shadowing</td>
+        <td>Sunlight obstructed by vegetation, man-made structures, or adjacent rows. </td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Soiling</td>
+        <td>Dirt, dust, or other debris on surface of module. </td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Vegetation</td>
+        <td>Panels blocked by vegetation. </td>
+    </tr>
+</table>
+<br>
+<footer style="text-align: center; background-color: #87bae8; border: 2px solid black">This project is done by Aishwarya Srinivasan, Ashwini M and Deekshitha S - Final Year EEE A.</footer>
+<footer style="text-align: center; background-color: #87bae8;border: 2px solid black">(Batch - A05)</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Classify your Image!</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='mystyle.css') }}">
+
+</head>
+
+<body> 
+
+<div id="maintext" style="position:absolute;margin-top: 10 px; margin-left:275px; margin-right: 100px;margin-bottom:  10px; width:700px; height:200px; text-align:center; top:0; bottom: 0; left: 0; right: 0;">  
+  <h1>System For Online Fault Detection and Classification in Photovoltaic Plants</h1>
+  <h2 class="text-light mb-2" > Upload your image to be classified! </h2>
+  <h4 class="text-light mb-5" > (Please upload an image less than 500kb in size)</h4>
+  <form method=post enctype=multipart/form-data>
+     <p class="text-light">
+        <input type=file name="file" class="button12">
+        <input type=submit value=Upload class="button2">
+     </p>
+  </form>  
+  <br><br>
+  <footer style="background-color: #87bae8; border: 1px solid black;">This project is done by Aishwarya Srinivasan, Ashwini M and Deekshitha S Final Year EEE A students.(Batch -A05)</footer>
+</div>
+
+</body>
+</html>
